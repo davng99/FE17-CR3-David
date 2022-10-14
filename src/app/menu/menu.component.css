@@ -1,0 +1,28 @@
+img{
+  height: 250px;
+}
+
+h1{
+  font-family: 'Great Vibes', sans-serif;
+  font-size: 50px;
+}
+
+.price{
+  margin: 20px;
+}
+
+.menu-buttons{
+  margin: 20px;
+}
+
+.menu-buttons a{
+  margin-right: 10px;
+}
+
+.available-box{
+  margin-top: 20px;
+}
+
+.available-text{
+  margin: 20px;
+}

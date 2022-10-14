@@ -1,0 +1,17 @@
+<div class="container mb-4">
+  <h2 class="mt-4">Product Details</h2>
+  <div class="card" style="width: 500px;" *ngIf="menu">
+    <div class="card-body">
+      <img src="{{menu.img}}" alt="{{menu.name}}">
+      <hr>
+      <h3 class="card-title">{{ menu.name }}</h3>
+      <h4>{{ menu.price | currency:"EUR" }}</h4>
+      <p class="card-text">{{ menu.description }}</p>
+      <div class="d-flex justify-content-start menu-buttons">
+        <button class="btn btn-danger" routerLink="/menus">Back to menu</button>
+        <button class="btn btn-success" (click)="addToCart()">Order</button>
+      </div>
+    </div>
+  </div>
+</div>
+

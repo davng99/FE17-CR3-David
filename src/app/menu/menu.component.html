@@ -1,0 +1,31 @@
+<div class="container mb-4">
+  <h1 class="text-center mt-4">{{titleMenu}}</h1>
+  <hr>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mt-4">
+    <div class="col d-flex justify-content-center" *ngFor="let menu of menus; index as menuId">
+
+      <div class="card mt-4" style="width: 22rem;">
+        <img src="{{ menu.img }}" class="card-img-top" alt="{{ menu.name }}">
+        <div class="card-body card-content">
+          <h5 class="card-title">{{menu.name}}</h5>
+          <p class="card-text">{{menu.description}}</p>
+        </div>
+        <h4 class="card-text price">{{ menu.price | currency: "EUR" }}</h4>
+
+        <ng-template [ngIf]="menu.availability == true" [ngIfElse]="none">
+          <div class="d-flex justify-content-start menu-buttons">
+            <a class="btn btn-primary details-link" routerLink="/menus/{{menuId}}">Go to details</a>
+          </div>
+        </ng-template>
+        <ng-template #none>
+          <div class="available-box">
+            <p class="text-danger available-text">Not available</p>
+          </div>
+        </ng-template>
+      </div>
+
+    </div>
+  </div>
+</div>
+

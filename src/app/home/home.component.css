@@ -23,16 +23,28 @@
   z-index: 1;
 }
 
-.home-box p{
+.home-box p, .home-box span, .home-box a{
   position: absolute;
   color: white;
   z-index: 1;
+}
+
+.home-box p{
+  bottom: 300px;
+}
+
+.home-box span{
+  color: yellow;
+  font-size: 50px;
   bottom: 250px;
 }
 
 .home-box a{
-  position: absolute;
-  color: white;
-  z-index: 1;
   bottom: 180px;
+}
+
+@media screen and (max-width: 768px) {
+  .home-box h1{
+    font-size: 50px;
+  }
 }

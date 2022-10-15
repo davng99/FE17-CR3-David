@@ -1,7 +1,14 @@
 nav{
-  height: 90px;
+  height: 100px;
+  z-index: 2;
 }
 
 .img-logo{
   height: 80px;
+}
+
+
+ul li a{
+  font-size: 20px;
+  margin: 0 10px
 }

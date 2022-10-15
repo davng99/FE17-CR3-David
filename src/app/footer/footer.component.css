@@ -1,0 +1,5 @@
+@media screen and (max-width: 768px) {
+  .footer-icons i{
+    font-size: 25px;
+  }
+}

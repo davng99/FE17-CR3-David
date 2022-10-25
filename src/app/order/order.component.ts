@@ -21,7 +21,7 @@ export class OrderComponent implements OnInit {
 
   constructor(private cartService: CartService) { }
 
-  delItem(menu:Imenus, i:number){
+  delItem(i:number){
     this.menus.splice(i, 1);
     this.menus = this.cartService.getMenus();
     this.total = this.cartService.sumTotal();

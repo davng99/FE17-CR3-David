@@ -1,8 +1,7 @@
-// import { CartService } from './../cart.service';
 import { Component, OnInit } from '@angular/core';
 import { menus } from '../menus';
 import { Imenus } from '../Imenus';
-
+import { CartService } from '../cart.service';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -12,16 +11,15 @@ export class MenuComponent implements OnInit {
   titleMenu : string = "Our menus";
 
   menus:Imenus[] = menus;
-  menu: Imenus = {} as Imenus;
 
   constructor(
-    // private cartService: CartService
+    private cartService: CartService
   ) { }
 
-  // addToCart(){
-  //   window.alert('Your menu has been added to the cart!');
-  //   this.cartService.addToCart(this.menu);
-  // }
+  addToCart(obj: Imenus){
+    window.alert('Your menu has been added to the cart!');
+    this.cartService.addToCart(obj);
+  }
 
   ngOnInit(): void {
   }

@@ -16,6 +16,7 @@
         <ng-template [ngIf]="menu.availability == true" [ngIfElse]="none">
           <div class="d-flex justify-content-start menu-buttons">
             <a class="btn btn-primary details-link" routerLink="/menus/{{menuId}}">Details</a>
+            <button class="btn btn-success" (click)="addToCart(menu)">Order</button>
           </div>
         </ng-template>
         <ng-template #none>
